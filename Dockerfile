@@ -3,6 +3,7 @@ FROM alpine:3.5
 ENV LANG=en_US.UTF-8
 
 ADD app /usr/local/bin/app
+ADD docker-entrypoint.sh /usr/local/bin/
 
 COPY requirements.txt /tmp/requirements.txt
 
@@ -33,7 +34,7 @@ RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
     && rm /tmp/requirements.txt \
     && rm -rf ~/.cache/pip
 
-COPY docker-entrypoint.sh /usr/local/bin
+
 
 ENTRYPOINT ["bash","docker-entrypoint.sh"]
 
