@@ -33,7 +33,7 @@ RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
     && rm /tmp/requirements.txt \
     && rm -rf ~/.cache/pip
 
-VOLUME /home/mitmproxy/.mitmproxy
+
 
 EXPOSE 8080
 
