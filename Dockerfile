@@ -33,7 +33,7 @@ RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
     && rm /tmp/requirements.txt \
     && rm -rf ~/.cache/pip
 
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /usr/local/bin
 
 ENTRYPOINT ["bash","docker-entrypoint.sh"]
 
