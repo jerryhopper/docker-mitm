@@ -37,6 +37,4 @@ VOLUME /home/mitmproxy/.mitmproxy
 
 EXPOSE 8080
 
-
-
 CMD ["mitmdump -s /usr/local/bin/app/ingress-mitm.py"]
