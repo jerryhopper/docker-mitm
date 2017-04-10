@@ -5,7 +5,7 @@ ENV LANG=en_US.UTF-8
 ADD app /usr/local/bin/app
 
 COPY requirements.txt /tmp/requirements.txt
-ADD docker-entrypoint.sh /usr/local/bin
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 # add our user first to make sure the ID get assigned consistently,
 # regardless of whatever dependencies get added
