@@ -35,6 +35,6 @@ RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
 
 EXPOSE 8080
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+#ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["mitmdump -s /usr/local/bin/app/ingress-mitm.py"]
