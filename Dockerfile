@@ -36,7 +36,6 @@ RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
 
 
 
-ENTRYPOINT ["bash","docker-entrypoint.sh"]
 
 EXPOSE 8080
 
