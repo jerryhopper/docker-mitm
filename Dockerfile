@@ -12,7 +12,7 @@ COPY requirements.txt /tmp/requirements.txt
 # regardless of whatever dependencies get added
 RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
     && apk add --update --no-cache \
-        pip \
+        pypip \
         su-exec \
         git \
         g++ \
