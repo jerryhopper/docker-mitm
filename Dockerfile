@@ -37,6 +37,6 @@ VOLUME /home/mitmproxy/.mitmproxy
 
 EXPOSE 8080
 
-#ENTRYPOINT ["docker-entrypoint.sh"]
+
 
 CMD ["mitmdump -s /usr/local/bin/app/ingress-mitm.py"]
