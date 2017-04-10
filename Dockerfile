@@ -20,6 +20,7 @@ RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
         openssl-dev \
         python3 \
         python3-dev \
+        bash \
     && python3 -m ensurepip \
     && LDFLAGS=-L/lib pip3 install -r /tmp/requirements.txt \
     && apk del --purge \
