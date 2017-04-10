@@ -35,7 +35,7 @@ RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["bash","docker-entrypoint.sh"]
 
 EXPOSE 8080
 
