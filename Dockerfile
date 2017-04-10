@@ -5,6 +5,7 @@ ENV LANG=en_US.UTF-8
 ADD app /usr/local/bin/app
 
 COPY requirements.txt /tmp/requirements.txt
+COPY docker-entrypoint.sh /usr/local/bin
 
 # add our user first to make sure the ID get assigned consistently,
 # regardless of whatever dependencies get added
@@ -34,7 +35,6 @@ RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
 
 EXPOSE 8080
 
-COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["python /usr/local/bin/app/ingress-mitm.py"]
