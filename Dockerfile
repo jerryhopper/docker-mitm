@@ -3,7 +3,7 @@ FROM alpine:3.5
 ENV LANG=en_US.UTF-8
 
 ADD app /usr/local/bin/app
-ADD docker-entrypoint.sh /usr/local/bin/
+
 
 COPY requirements.txt /tmp/requirements.txt
 
