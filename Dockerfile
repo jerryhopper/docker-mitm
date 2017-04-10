@@ -37,4 +37,4 @@ EXPOSE 8080
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD ["python /usr/local/bin/app/ingress-mitm.py"]
+CMD ["mitmdump -s /usr/local/bin/app/ingress-mitm.py"]
