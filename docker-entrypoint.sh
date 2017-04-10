@@ -1,1 +1,1 @@
-echo "eocker-entrypoint.sh"
+echo "docker-entrypoint.sh"
