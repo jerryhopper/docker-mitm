@@ -2,9 +2,6 @@ FROM alpine:3.5
 
 ENV LANG=en_US.UTF-8
 
-ADD app /usr/local/bin/app
-
-
 COPY requirements.txt /tmp/requirements.txt
 
 
@@ -35,8 +32,10 @@ RUN addgroup -S mitmproxy && adduser -S -G mitmproxy mitmproxy \
     && rm -rf ~/.cache/pip
 
 
+VOLUME /home/mitmproxy/.mitmproxy
 
+COPY docker-entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 8080
-
-CMD ["mitmdump -s /usr/local/bin/app/ingress-mitm.py"]
+EXPOSE 8080 8081
+CMD ["mitmproxy"]
